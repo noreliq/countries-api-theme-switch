@@ -1,0 +1,13 @@
+@import "./scss/colours.scss";
+
+.App {
+  transition: background-color 150ms ease-out;
+
+  &.theme-dark {
+    background: $blue-dark;
+  }
+
+  &.theme-light {
+    background: $white;
+  }
+}

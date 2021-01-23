@@ -1,0 +1,26 @@
+$mobile: 375px;
+$desktop: 1440px;
+
+@mixin bp-mobile-up {
+  @media (min-width: $mobile) {
+    @content;
+  }
+}
+
+@mixin bp-mobile-down {
+  @media (max-width: $mobile) {
+    @content;
+  }
+}
+
+@mixin bp-desktop-up {
+  @media (min-width: $desktop) {
+    @content;
+  }
+}
+
+@mixin bp-desktop-down {
+  @media (max-width: $desktop) {
+    @content;
+  }
+}

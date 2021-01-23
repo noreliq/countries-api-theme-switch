@@ -1,0 +1,9 @@
+$space-1: 1em;
+$space-2: calc(1.25 * #{$space-1});
+$space-3: calc(2 * #{$space-1});
+$space-4: calc(3.25 * #{$space-1});
+$space-5: calc(5.25 * #{$space-1});
+$space-6: calc(8.5 * #{$space-1});
+$space-7: calc(13.75 * #{$space-1});
+
+$space-half: calc(0.5 * #{$space-1});
