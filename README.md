@@ -1,10 +1,15 @@
 # Country explorer with multi theme
 
-A game made in React and SCSS
+A small website built in React and SCSS
 
 FrontendMentor.io Challenge: https://www.frontendmentor.io/challenges/rest-countries-api-with-color-theme-switcher-5cacc469fec04111f7b848ca
 
 My end result: https://countries-api-theme-switch.vercel.app/
+
+Further improvements:
+
+- Add in Redux or Context/Reducer to avoid hitting the API on each page load
+- Remember the search string / selected region when the user clicks back from details page
 
 # Getting Started with Create React App
 
