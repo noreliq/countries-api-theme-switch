@@ -1,0 +1,139 @@
+@import "../../scss/spacing.scss";
+@import "../../scss/border-radius.scss";
+@import "../../scss/accessibility.scss";
+@import "../../scss/colours.scss";
+@import "../../scss/shadows.scss";
+
+.FieldDropdown {
+  position: relative;
+  max-width: 100%;
+
+  &__Header {
+    padding: 0 $space-2;
+    height: 50px;
+
+    border-radius: $border-radius-sm;
+    box-shadow: $shadow-md;
+
+    display: flex;
+    align-items: center;
+
+    cursor: pointer;
+  }
+
+  &__Value,
+  &__Placeholder {
+    margin-left: $space-1;
+    margin-right: $space-2;
+    flex-grow: 1;
+    user-select: none;
+  }
+
+  &__Options {
+    pointer-events: none;
+    opacity: 0;
+
+    transition: opacity 150ms ease-out;
+
+    position: absolute;
+    border-radius: $border-radius-sm;
+    box-shadow: $shadow-md;
+
+    width: 100%;
+    margin-top: $space-half;
+
+    padding: $space-half 0px;
+
+    li {
+      padding: $space-half $space-2;
+      cursor: pointer;
+
+      transition: background-color 150ms ease-out;
+
+      &.selected,
+      &:hover {
+        font-weight: 800;
+      }
+
+      &:focus {
+        outline: $focus-outline;
+      }
+    }
+  }
+
+  &__Arrow {
+    transition: transform 150ms ease-out;
+  }
+
+  // &:focus-within &__Options,
+  &.open &__Options {
+    pointer-events: all;
+    opacity: 1;
+  }
+
+  &.open &__Arrow {
+    transform: rotate(180deg);
+  }
+
+  &:focus {
+    outline: $focus-outline;
+  }
+}
+
+.theme-light .FieldDropdown {
+  &__Header {
+    background: $white;
+    svg {
+      fill: $blue-darkest;
+    }
+  }
+
+  &__Value {
+    color: $blue-darkest;
+  }
+
+  &__Options {
+    background: $white;
+    color: $blue-darkest;
+  }
+
+  &__Placeholder {
+    color: $grey-dark;
+  }
+
+  li {
+    &.selected,
+    &:hover {
+      background: $grey-lightest;
+    }
+  }
+}
+
+.theme-dark .FieldDropdown {
+  &__Header {
+    background: $blue-dark;
+    svg {
+      fill: $white;
+    }
+  }
+
+  &__Options {
+    background: $blue-dark;
+    color: $white;
+  }
+
+  &__Value {
+    color: $white;
+  }
+
+  &__Placeholder {
+    color: $grey-dark;
+  }
+
+  li {
+    &.selected,
+    &:hover {
+      background: $grey-dark;
+    }
+  }
+}

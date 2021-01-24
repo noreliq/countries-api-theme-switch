@@ -1,0 +1,24 @@
+@import "../scss/spacing";
+@import "../scss/colours";
+
+.Loading {
+  margin: $space-4 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  svg {
+    margin-right: $space-1;
+    fill: currentColor;
+  }
+
+  font-size: 18px;
+}
+
+.theme-light .Loading {
+  color: $blue-darkest;
+}
+
+.theme-dark .Loading {
+  color: $white;
+}

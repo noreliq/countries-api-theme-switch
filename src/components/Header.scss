@@ -1,23 +1,44 @@
 @import "../scss/spacing.scss";
 @import "../scss/colours.scss";
+@import "../scss/shadows.scss";
+@import "../scss/border-radius.scss";
+@import "../scss/breakpoints.scss";
 
 .Header {
-  padding: $space-2 $space-5;
-  box-shadow: 0px 5px 6px -1px rgba(0, 0, 0, 0.2);
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+  padding-top: $space-2;
+  padding-bottom: $space-2;
+  box-shadow: $shadow-md;
+
+  &__Container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
 
   h1 {
     font-weight: 800;
     transition: color 150ms ease-out;
+
+    @include bp-tablet-down {
+      font-size: 18px;
+    }
+
+    @include bp-mobile-down {
+      font-size: 14px;
+    }
   }
 
   button {
+    background: none;
+    font-family: "Nunito Sans", sans-serif;
+
+    padding: 0px;
+    border: 0px;
+
     display: flex;
     align-items: center;
-    padding: $space-half $space-1;
-    border-radius: 6px;
+    padding: $space-half;
+    border-radius: $border-radius-sm;
 
     svg {
       fill: currentColor;
@@ -26,6 +47,10 @@
     span {
       margin-left: $space-half;
       font-weight: 600;
+
+      @include bp-mobile-down {
+        font-size: 14px;
+      }
     }
 
     transition: 150ms ease-out;
@@ -35,6 +60,7 @@
 
 .theme-dark .Header {
   color: $white;
+  background: $blue-dark;
 
   button {
     &:hover {
@@ -46,11 +72,12 @@
 
 .theme-light .Header {
   color: $blue-darkest;
+  background: white;
 
   button {
     &:hover {
       background: #fefefe;
-      box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+      box-shadow: $shadow-md;
     }
   }
 }

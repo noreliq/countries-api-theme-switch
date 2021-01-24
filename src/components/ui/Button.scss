@@ -1,0 +1,47 @@
+@import "../../scss/spacing.scss";
+@import "../../scss/border-radius.scss";
+@import "../../scss/accessibility.scss";
+@import "../../scss/colours.scss";
+@import "../../scss/shadows.scss";
+
+.Button {
+  display: inline-flex;
+  align-items: center;
+
+  border-radius: $border-radius-sm;
+  box-shadow: $shadow-md;
+  padding: 0px $space-2;
+  height: 40px;
+  text-decoration: none;
+
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+
+  svg {
+    margin-right: $space-half;
+    fill: currentColor;
+  }
+
+  transition: 150ms ease-out;
+  transition-property: background-color, color;
+}
+
+.theme-light .Button {
+  background: $white;
+  color: $blue-darkest;
+
+  &:hover {
+    background: $grey-dark;
+    color: $white;
+  }
+}
+
+.theme-dark .Button {
+  background: $blue-dark;
+  color: $white;
+
+  &:hover {
+    background: $grey-dark;
+  }
+}

@@ -1,0 +1,54 @@
+@import "../../scss/spacing.scss";
+@import "../../scss/border-radius.scss";
+@import "../../scss/accessibility.scss";
+@import "../../scss/colours.scss";
+@import "../../scss/shadows.scss";
+
+.FieldInput {
+  max-width: 100%;
+
+  position: relative;
+  border-radius: $border-radius-sm;
+  box-shadow: $shadow-md;
+
+  input {
+    border: 0px;
+    // flex-grow: 1;
+    width: 100%;
+    background: none;
+    padding: 0;
+    height: 50px;
+    padding-left: $space-4;
+  }
+
+  svg {
+    position: absolute;
+    left: $space-2;
+    top: 50%;
+    transform: translateY(-50%);
+    // flex-shrink: 0;
+    fill: currentColor;
+  }
+}
+
+.theme-light .FieldInput {
+  background: white;
+  color: $blue-darkest;
+
+  input {
+    &::placeholder {
+      color: $grey-dark;
+    }
+  }
+}
+
+.theme-dark .FieldInput {
+  background: $blue-dark;
+  color: $white;
+
+  input {
+    &::placeholder {
+      color: $grey-dark;
+    }
+  }
+}

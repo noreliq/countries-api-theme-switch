@@ -1,13 +1,15 @@
 @import "./scss/colours.scss";
 
 .App {
+  min-height: 100vh;
+
   transition: background-color 150ms ease-out;
 
   &.theme-dark {
-    background: $blue-dark;
+    background: $blue-darker;
   }
 
   &.theme-light {
-    background: $white;
+    background: $grey-lightest;
   }
 }

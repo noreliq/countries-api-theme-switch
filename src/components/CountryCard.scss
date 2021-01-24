@@ -1,0 +1,48 @@
+@import "../scss/spacing.scss";
+@import "../scss/border-radius.scss";
+@import "../scss/accessibility.scss";
+@import "../scss/colours.scss";
+@import "../scss/shadows.scss";
+
+.CountryCard {
+  border-radius: $border-radius-sm;
+  box-shadow: $shadow-md;
+  overflow: hidden;
+
+  text-decoration: none;
+  display: block;
+
+  h3 {
+    font-size: 18px;
+    margin-bottom: $space-2;
+  }
+
+  &__Flag {
+    width: 100%;
+  }
+
+  &__Text {
+    padding: $space-2;
+  }
+
+  p {
+    margin-top: $space-half;
+  }
+
+  transition: 150ms ease-out;
+  transition-property: box-shadow, transform;
+  &:hover {
+    transform: translateY(-6px);
+    box-shadow: $shadow-lg;
+  }
+}
+
+.theme-light .CountryCard {
+  background: $white;
+  color: $blue-darkest;
+}
+
+.theme-dark .CountryCard {
+  background: $blue-dark;
+  color: $white;
+}

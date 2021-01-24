@@ -1,0 +1,77 @@
+@import "../scss/spacing";
+@import "../scss/breakpoints";
+@import "../scss/colours";
+
+.CountryDetails {
+  padding-top: $space-4;
+  padding-bottom: $space-4;
+  font-size: 16px;
+
+  &__Content {
+    margin-top: $space-4;
+
+    @include bp-tablet-up {
+      display: flex;
+      align-items: center;
+    }
+  }
+
+  &__Stats {
+    margin-top: $space-3;
+
+    @include bp-mobile-down {
+      p + p {
+        margin-top: $space-1;
+      }
+    }
+
+    @include bp-mobile-up {
+      display: grid;
+      grid-template-columns: auto auto;
+      column-gap: $space-4;
+      row-gap: $space-1;
+    }
+  }
+
+  &__Flag {
+    @include bp-tablet-up {
+      width: 55%;
+      margin-right: $space-5;
+    }
+  }
+
+  &__Text {
+    @include bp-tablet-down {
+      margin-top: $space-4;
+    }
+  }
+
+  &__Border {
+    margin-top: $space-4;
+  }
+
+  &__BorderList {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+
+    margin: -5px;
+    margin-top: 5px;
+
+    .Button {
+      margin: 5px;
+    }
+  }
+}
+
+.theme-light .CountryDetails {
+  &__Text {
+    color: $blue-darkest;
+  }
+}
+
+.theme-dark .CountryDetails {
+  &__Text {
+    color: $white;
+  }
+}
