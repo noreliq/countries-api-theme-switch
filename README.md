@@ -1,3 +1,11 @@
+# Country explorer with multi theme
+
+A game made in React and SCSS
+
+FrontendMentor.io Challenge: https://www.frontendmentor.io/challenges/rest-countries-api-with-color-theme-switcher-5cacc469fec04111f7b848ca
+
+My end result: TBD
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
